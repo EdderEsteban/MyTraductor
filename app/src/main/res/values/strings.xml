@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyTraductor</string>
+    <string name="traductor">Traductor</string>
+    <string name="palabra">Palabra en español</string>
+    <string name="ingrese">Ingrese una palabra en español</string>
+    <string name="traducir">Traducir</string>
+    <string name="copyright">Create By Ddrs Soft</string>
+    <string name="english">English</string>
+</resources>
