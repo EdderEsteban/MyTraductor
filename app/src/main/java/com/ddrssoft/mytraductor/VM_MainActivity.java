@@ -15,9 +15,10 @@ public class VM_MainActivity extends AndroidViewModel {
         contexto = application.getApplicationContext();
     }
 
-    public void captura(String palabra){
+    public void captura(String pal){
         boolean valido = false;
-
+        //Independientemente como se escriba la palabra, la paso a minuscula
+        String palabra = pal.toLowerCase();
         //Valido si la palabra esta en la lista
         switch (palabra){
             case "perro":

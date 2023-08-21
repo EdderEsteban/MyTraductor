@@ -42,11 +42,11 @@ public class VM_Traduccion extends AndroidViewModel {
                 word.setValue(palAuto);
                 break;
             case "naranja":
-                Palabra palNaranja = new Palabra("perro", "Dog", R.drawable.perro);
+                Palabra palNaranja = new Palabra("naranja", "Orange", R.drawable.naranja);
                 word.setValue(palNaranja);
                 break;
             case "durazno":
-                Palabra palDurazno = new Palabra("perro", "Dog", R.drawable.perro);
+                Palabra palDurazno = new Palabra("durazno", "Peach", R.drawable.durazno);
                 word.setValue(palDurazno);
                 break;
             }
