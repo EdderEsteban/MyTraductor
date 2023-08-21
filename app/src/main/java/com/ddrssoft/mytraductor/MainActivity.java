@@ -31,7 +31,7 @@ private VM_MainActivity vm;
             @Override
             public void onClick(View view) {
                 //llamar a la funcion "captura()" del ViewModel y pasarle el EditText "etPalabra", pero este trae un objeto editable, no un string
-                //por eso hay q llamar al metodo toString() para convertirlo en String.
+                //por eso hay q llamar al metodo toString() para convertirlo en String. A travez de Captura() evaluo la palabra y envio a Traduccion.
                 vm.captura(binding.etPalabra.getText().toString());
             }
         });

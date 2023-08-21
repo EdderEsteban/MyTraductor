@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.ddrssoft.mytraductor.databinding.ActivityMainBinding;
@@ -19,10 +20,17 @@ public class Traduccion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //Despues de agregar el binding en "build.gradle.kts", instanciar de esta forma.
         ActivityTraduccionBinding binding = ActivityTraduccionBinding.inflate(getLayoutInflater());
+
         //Programar el seteo automatico de los demas activitys usando binding
         setContentView(binding.getRoot());
+
         //Vincular Traduccion Activity al ViewModel e Instancear el ViewModel
         vm= ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(VM_Traduccion.class);
+
+        //Capturar el Intent enviado desde el MainActivity --> funcion "captura()"
+        Intent intent = getIntent();
+        String palabraCapturada = (String) intent.getStringExtra("palabra");
+
         //Crear el Observador del Mutable de Palabras, pasando 2 parametros, el contexto y el callback es un objeto observer.
         vm.getWord().observe(this, new Observer<Palabra>() {
             @Override
@@ -31,5 +39,6 @@ public class Traduccion extends AppCompatActivity {
                 binding.screenshot.setImageResource(palabra.getIdFoto());
             }
         });
+        vm.traducir(palabraCapturada);
     }
 }

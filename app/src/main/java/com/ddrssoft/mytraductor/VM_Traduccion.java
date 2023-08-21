@@ -27,35 +27,30 @@ public class VM_Traduccion extends AndroidViewModel {
     }
 
     public void traducir(String palabra){
-        String traduccion;
-        int idFoto;
 
         switch (palabra) {
-            case "gato":
-                traduccion = "Dog";
-                idFoto = R.drawable.perro;
-                break;
             case "perro":
-                traduccion = "Cat";
-                idFoto = R.drawable.gato;
+                Palabra palPerro = new Palabra("perro", "Dog", R.drawable.perro);
+                word.setValue(palPerro);
                 break;
-            case "rojo":
-                traduccion = "Car";
-                idFoto = R.drawable.auto;
+            case "gato":
+                Palabra palGato = new Palabra("gato", "Cat", R.drawable.gato);
+                word.setValue(palGato);
                 break;
-            case "azul":
-                traduccion = "Orange";
-                idFoto = R.drawable.naranja;
+            case "auto":
+                Palabra palAuto = new Palabra("auto", "Car", R.drawable.auto);
+                word.setValue(palAuto);
                 break;
-            case "mesa":
-                traduccion = "Peach";
-                idFoto = R.drawable.durazno;
+            case "naranja":
+                Palabra palNaranja = new Palabra("perro", "Dog", R.drawable.perro);
+                word.setValue(palNaranja);
                 break;
-            default:
-                traduccion = "No se encontró traducción";
-                idFoto = R.drawable.perdido; // Imagen por defecto en caso de no encontrar una traducción
+            case "durazno":
+                Palabra palDurazno = new Palabra("perro", "Dog", R.drawable.perro);
+                word.setValue(palDurazno);
                 break;
-        }
+            }
+
     }
 
 }

@@ -29,8 +29,10 @@ public class VM_MainActivity extends AndroidViewModel {
                 break;
             }
         if (valido == true){
-            //Crear el Intent
+            //Crear el Intent con 2 parametros, contexto y a donde sera enviado.
             Intent intPalabra = new Intent(contexto, Traduccion.class);
+            //Preparamos el Intent a enviar.
+            intPalabra.putExtra("palabra", palabra);
             //Informar al SO que no esta iniciando el Activity desde un Activity sino de ViewModel con una Bandera
             intPalabra.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             contexto.startActivity(intPalabra);
